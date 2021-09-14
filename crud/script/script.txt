@@ -1,0 +1,10 @@
+create table usuario (
+  id_usuario int not null auto_increment primary key ,
+  login varchar(80) not null unique,
+  nome varchar(100) not null,
+  senha varchar(50) not null,
+  tipo char(1) not null default 'U'
+);
+
+insert into usuario (login, nome, senha, tipo) values ('adm', 'Administrador', '123', 'S');
+insert into usuario (login, nome, senha, tipo) values ('bruno', 'Bruno B. Boniati', '456', 'U');
